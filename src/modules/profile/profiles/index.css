@@ -1,0 +1,43 @@
+.profiles-body {
+    background-color: #FFFFFF;
+}
+
+.profiles-header {
+    background-color: #2C3539;
+    color: #ffffff;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.profiles-content {
+   width: 100%;
+   min-height: calc(100vh - 157px);
+}
+
+.profiles-content  .ant-table-thead > tr > th {
+    background-color: #FBB917;
+}
+
+.profiles-content  .ant-table-tbody > tr:nth-child(odd) > td {
+    background-color: #E5E4E2;
+    border-top: 1px solid #848482;
+    border-bottom: 1px solid #848482;
+}
+
+.content-table {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.profiles-footer {
+    background-color: #2C3539;
+    color: #ffffff;
+    text-align: center;
+    height: 57px;
+    line-height: 57px;
+    width: 100%;
+}
