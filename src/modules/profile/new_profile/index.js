@@ -20,7 +20,7 @@ class NewProfile extends Component {
                 <Col span={24}>
                     <Modal
                         className="new-profile-modal"
-                        visible={true}
+                        visible={visible}
                         title="Create a New Profile"
                         okText="Create"
                         onCancel={() => this.handleCancel()}

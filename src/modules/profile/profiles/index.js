@@ -4,41 +4,9 @@ import { Layout, Table, Icon } from 'antd';
 
 import PageHeader from '../../../commons/page_header';
 import PageFooter from '../../../commons/page_footer';
+import NewProfileModal from '../new_profile';
 
-const { Header, Footer, Content } = Layout;
-
-class NewProfile extends Component {
-
-    handleNewProfile = () => {
-        window.location.href="/new-profile";
-    }
-
-    render(){
-        return(
-                <Icon className="new-profile-icon" type="form" onClick={() => this.handleNewProfile()}/>
-        );
-    }
-}
-
-const tableColumns = [
-    {
-        title: 'FIRST NAME',
-        dataIndex: 'fname',
-    },
-    {
-        title: 'MIDDLE NAME',
-        dataIndex: 'mname',
-    },
-    {
-        title: 'LAST NAME',
-        dataIndex: 'lname',
-    },
-    {
-        title: <NewProfile />,
-        dataIndex: "id",
-        render: (a, row) => <Actions profileId={a} profileData={row} />
-    },
-];
+const { Content } = Layout;
 
 const tableData = [
     {
@@ -115,7 +83,38 @@ class Actions extends Component {
 }
 
 class Profiles extends Component {
+    state = {
+        isModalVisible: false
+    }
+
+    handleNewProfile = () => {
+        this.setState({
+            isModalVisible: true
+        });
+    }
+
     render(){
+        const { isModalVisible } = this.state;
+        const tableColumns = [
+            {
+                title: 'FIRST NAME',
+                dataIndex: 'fname',
+            },
+            {
+                title: 'MIDDLE NAME',
+                dataIndex: 'mname',
+            },
+            {
+                title: 'LAST NAME',
+                dataIndex: 'lname',
+            },
+            {
+                title: <Icon className="new-profile-icon" type="form" onClick={() => this.handleNewProfile()}/>,
+                dataIndex: "id",
+                render: (a, row) => <Actions profileId={a} profileData={row} />
+            },
+        ];
+
         return (
             <Layout className="profiles-body">
                 <PageHeader/>
@@ -127,6 +126,7 @@ class Profiles extends Component {
                         pagination={{defaultPageSize: 7}}
                     />
                 </Content>
+                <NewProfileModal visible={isModalVisible} />
                 <PageFooter/>
             </Layout>
         );

@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Router from "./utils/router";
+import MainPage from './modules/profile/profiles';
 
 function App() {
   return (
-    <Router />
+    <MainPage />
   );
 }
 
