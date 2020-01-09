@@ -2,3 +2,8 @@
     margin: 0px;
     padding: 0px;
 }
+
+@font-face {
+    font-family: "copperplate-gothic-regular";
+    src: url("./resources/fonts/Copperplate_Gothic_Bold_Regular.ttf");
+}
