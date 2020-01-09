@@ -8,9 +8,14 @@ import PageFooter from '../../../commons/page_footer';
 const { Header, Footer, Content } = Layout;
 
 class NewProfile extends Component {
+
+    handleNewProfile = () => {
+        window.location.href="/new-profile";
+    }
+
     render(){
         return(
-                <Icon className="new-profile-icon" type="form" />
+                <Icon className="new-profile-icon" type="form" onClick={() => this.handleNewProfile()}/>
         );
     }
 }
