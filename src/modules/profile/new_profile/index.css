@@ -15,3 +15,8 @@
 .new-profile-modal .ant-btn-primary {
     background-color: #FBB917 !important;
 }
+
+.new-profile-modal .ant-modal-content {
+    width: 80%;
+    margin: 0px auto;
+}
