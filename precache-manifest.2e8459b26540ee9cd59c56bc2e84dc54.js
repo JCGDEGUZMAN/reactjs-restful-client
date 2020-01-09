@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a0f810cafc5d4c362142a6ff25a15df",
+    "revision": "e4cf37c88f648cca7f53caf8f6d7b3c1",
     "url": "/reactjs-restful-client/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reactjs-restful-client/static/css/2.35f98baf.chunk.css"
   },
   {
-    "revision": "b17fe0772937337003d7",
+    "revision": "917d6017cfd59bd3e1e8",
     "url": "/reactjs-restful-client/static/css/main.c6616d73.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reactjs-restful-client/static/js/2.bb650ff1.chunk.js"
   },
   {
-    "revision": "b17fe0772937337003d7",
-    "url": "/reactjs-restful-client/static/js/main.a8dcd30c.chunk.js"
+    "revision": "917d6017cfd59bd3e1e8",
+    "url": "/reactjs-restful-client/static/js/main.433f7c52.chunk.js"
   },
   {
     "revision": "684b014ce40f839ec7fd",
