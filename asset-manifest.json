@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/reactjs-restful-client/static/css/main.871c5aab.chunk.css",
-    "main.js": "/reactjs-restful-client/static/js/main.c3895ffa.chunk.js",
-    "main.js.map": "/reactjs-restful-client/static/js/main.c3895ffa.chunk.js.map",
+    "main.css": "/reactjs-restful-client/static/css/main.86d7a469.chunk.css",
+    "main.js": "/reactjs-restful-client/static/js/main.e7f6300e.chunk.js",
+    "main.js.map": "/reactjs-restful-client/static/js/main.e7f6300e.chunk.js.map",
     "runtime-main.js": "/reactjs-restful-client/static/js/runtime-main.47b2756e.js",
     "runtime-main.js.map": "/reactjs-restful-client/static/js/runtime-main.47b2756e.js.map",
     "static/css/2.35f98baf.chunk.css": "/reactjs-restful-client/static/css/2.35f98baf.chunk.css",
-    "static/js/2.002c1aab.chunk.js": "/reactjs-restful-client/static/js/2.002c1aab.chunk.js",
-    "static/js/2.002c1aab.chunk.js.map": "/reactjs-restful-client/static/js/2.002c1aab.chunk.js.map",
+    "static/js/2.827ede04.chunk.js": "/reactjs-restful-client/static/js/2.827ede04.chunk.js",
+    "static/js/2.827ede04.chunk.js.map": "/reactjs-restful-client/static/js/2.827ede04.chunk.js.map",
     "index.html": "/reactjs-restful-client/index.html",
-    "precache-manifest.ae5cfdde815de273971ca02c7958d7c8.js": "/reactjs-restful-client/precache-manifest.ae5cfdde815de273971ca02c7958d7c8.js",
+    "precache-manifest.ffb2bd69c6997f52b7239ab3c592bcd0.js": "/reactjs-restful-client/precache-manifest.ffb2bd69c6997f52b7239ab3c592bcd0.js",
     "service-worker.js": "/reactjs-restful-client/service-worker.js",
     "static/css/2.35f98baf.chunk.css.map": "/reactjs-restful-client/static/css/2.35f98baf.chunk.css.map",
-    "static/css/main.871c5aab.chunk.css.map": "/reactjs-restful-client/static/css/main.871c5aab.chunk.css.map",
-    "static/media/index.css": "/reactjs-restful-client/static/media/Copperplate_Gothic_Bold_Regular.e3062d8d.ttf"
+    "static/css/main.86d7a469.chunk.css.map": "/reactjs-restful-client/static/css/main.86d7a469.chunk.css.map",
+    "static/media/App.css": "/reactjs-restful-client/static/media/Copperplate_Gothic_Bold_Regular.e3062d8d.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.47b2756e.js",
     "static/css/2.35f98baf.chunk.css",
-    "static/js/2.002c1aab.chunk.js",
-    "static/css/main.871c5aab.chunk.css",
-    "static/js/main.c3895ffa.chunk.js"
+    "static/js/2.827ede04.chunk.js",
+    "static/css/main.86d7a469.chunk.css",
+    "static/js/main.e7f6300e.chunk.js"
   ]
 }
