@@ -10,7 +10,7 @@
     line-height: 80px;
     width: 100%;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .profiles-content {
@@ -20,16 +20,42 @@
 
 .profiles-content  .ant-table-thead > tr > th {
     background-color: #FBB917;
+    text-align: center;
+}
+
+.profiles-content  .ant-table-thead > tr > th:last-child{
+    width: 200px;
+}
+
+.profiles-content  .ant-table-tbody > tr:hover > td {
+    background-color: #FBB917 !important;
+}
+
+.profiles-content  .ant-table-tbody > tr:nth-child(odd) > td:last-child {
+    width: 200px;
 }
 
 .profiles-content  .ant-table-tbody > tr:nth-child(odd) > td {
-    background-color: #E5E4E2;
+    background-color: #25383C;
+    color: #ffffff;
     border-top: 1px solid #848482;
     border-bottom: 1px solid #848482;
+    text-align: center;
+}
+
+.profiles-content  .ant-table-tbody > tr:nth-child(even) > td:last-child {
+    width: 200px;
+}
+
+.profiles-content  .ant-table-tbody > tr:nth-child(even) > td {
+    background-color: #ffffff;
+    border-top: 1px solid #848482;
+    border-bottom: 1px solid #848482;
+    text-align: center;
 }
 
 .content-table {
-    width: 90%;
+    width: 80%;
     margin: 0px auto;
 }
 
@@ -40,4 +66,20 @@
     height: 57px;
     line-height: 57px;
     width: 100%;
+}
+
+.action-icons {
+    margin: 0px 10px;
+}
+
+.action-icons:hover {
+    transform: scale(1.5);
+}
+
+.new-profile-icon svg {
+    font-size: 20px;
+}
+
+.new-profile-icon svg:hover {
+    transform: scale(1.5);
 }
