@@ -3,6 +3,15 @@ import React, {Component} from 'react';
 import { Form, Modal, Input, Row, Col } from 'antd';
 
 class NewProfile extends Component {
+
+    handleCancel = ()=> {
+        window.location.href="/";
+    }
+
+    handleCreate = ()=> {
+        window.location.href="/";
+    }
+
     render(){
         const { visible, onCancel, onCreate, form } = this.props;
         const { getFieldDecorator } = form;
@@ -14,8 +23,8 @@ class NewProfile extends Component {
                         visible={true}
                         title="Create a New Profile"
                         okText="Create"
-                        onCancel={onCancel}
-                        onOk={onCreate}
+                        onCancel={() => this.handleCancel()}
+                        onOk={() => this.handleCreate()}
                     >
                         <Form layout="vertical">
                             <Form.Item label="First Name">
