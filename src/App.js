@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Profiles from './modules/profile/profiles'
+import Router from "./utils/router";
 
 function App() {
   return (
-    <Profiles />
+    <Router />
   );
 }
 
