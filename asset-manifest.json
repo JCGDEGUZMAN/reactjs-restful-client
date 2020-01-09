@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/reactjs-restful-client/static/css/main.871c5aab.chunk.css",
+    "main.js": "/reactjs-restful-client/static/js/main.c3895ffa.chunk.js",
+    "main.js.map": "/reactjs-restful-client/static/js/main.c3895ffa.chunk.js.map",
+    "runtime-main.js": "/reactjs-restful-client/static/js/runtime-main.47b2756e.js",
+    "runtime-main.js.map": "/reactjs-restful-client/static/js/runtime-main.47b2756e.js.map",
+    "static/css/2.35f98baf.chunk.css": "/reactjs-restful-client/static/css/2.35f98baf.chunk.css",
+    "static/js/2.002c1aab.chunk.js": "/reactjs-restful-client/static/js/2.002c1aab.chunk.js",
+    "static/js/2.002c1aab.chunk.js.map": "/reactjs-restful-client/static/js/2.002c1aab.chunk.js.map",
+    "index.html": "/reactjs-restful-client/index.html",
+    "precache-manifest.13fc82d0ed48ace24972f66a96e5b555.js": "/reactjs-restful-client/precache-manifest.13fc82d0ed48ace24972f66a96e5b555.js",
+    "service-worker.js": "/reactjs-restful-client/service-worker.js",
+    "static/css/2.35f98baf.chunk.css.map": "/reactjs-restful-client/static/css/2.35f98baf.chunk.css.map",
+    "static/css/main.871c5aab.chunk.css.map": "/reactjs-restful-client/static/css/main.871c5aab.chunk.css.map",
+    "static/media/index.css": "/reactjs-restful-client/static/media/Copperplate_Gothic_Bold_Regular.e3062d8d.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47b2756e.js",
+    "static/css/2.35f98baf.chunk.css",
+    "static/js/2.002c1aab.chunk.js",
+    "static/css/main.871c5aab.chunk.css",
+    "static/js/main.c3895ffa.chunk.js"
+  ]
+}
