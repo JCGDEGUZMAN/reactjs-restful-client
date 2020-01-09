@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d0471fce1a5b736616c358b5ed45a447",
+    "revision": "bda89c4fee9164a1ad99351f2c1a39dd",
     "url": "/reactjs-restful-client/index.html"
   },
   {
