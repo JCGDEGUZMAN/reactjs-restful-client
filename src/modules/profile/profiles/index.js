@@ -93,6 +93,18 @@ class Profiles extends Component {
         });
     }
 
+    handleCancel = () => {
+        this.setState({
+            isModalVisible: false
+        });
+    }
+
+    handleCreate = () => {
+        this.setState({
+            isModalVisible: false
+        });
+    }
+
     render(){
         const { isModalVisible } = this.state;
         const tableColumns = [
@@ -126,7 +138,7 @@ class Profiles extends Component {
                         pagination={{defaultPageSize: 7}}
                     />
                 </Content>
-                <NewProfileModal visible={isModalVisible} />
+                <NewProfileModal visible={isModalVisible} onCancel={() => this.handleCancel()} onCreate={() => this.handleCreate()}/>
                 <PageFooter/>
             </Layout>
         );

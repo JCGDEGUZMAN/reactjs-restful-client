@@ -4,14 +4,6 @@ import { Form, Modal, Input, Row, Col } from 'antd';
 
 class NewProfile extends Component {
 
-    handleCancel = ()=> {
-        window.location.reload()
-    }
-
-    handleCreate = ()=> {
-        window.location.reload()
-    }
-
     render(){
         const { visible, onCancel, onCreate, form } = this.props;
         const { getFieldDecorator } = form;
@@ -23,8 +15,8 @@ class NewProfile extends Component {
                         visible={visible}
                         title="Create a New Profile"
                         okText="Create"
-                        onCancel={() => this.handleCancel()}
-                        onOk={() => this.handleCreate()}
+                        onCancel={onCancel}
+                        onOk={onCreate}
                     >
                         <Form layout="vertical">
                             <Form.Item label="First Name">
