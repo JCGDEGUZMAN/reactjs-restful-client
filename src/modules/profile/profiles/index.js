@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './index.css';
 import { Layout, Table, Icon } from 'antd';
 
+import PageHeader from '../../../commons/page_header';
+import PageFooter from '../../../commons/page_footer';
+
 const { Header, Footer, Content } = Layout;
 
 class NewProfile extends Component {
@@ -110,7 +113,7 @@ class Profiles extends Component {
     render(){
         return (
             <Layout className="profiles-body">
-                <Header className="profiles-header">PROFILES</Header>
+                <PageHeader/>
                 <Content className="profiles-content">
                     <Table
                         className="content-table"
@@ -119,7 +122,7 @@ class Profiles extends Component {
                         pagination={{defaultPageSize: 7}}
                     />
                 </Content>
-                <Footer className="profiles-footer"></Footer>
+                <PageFooter/>
             </Layout>
         );
     }

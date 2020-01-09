@@ -1,0 +1,11 @@
+.profiles-header {
+    background-color: #2C3539;
+    color: #ffffff;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 14px;
+    font-family: "copperplate-gothic-regular";
+}
