@@ -78,11 +78,11 @@ class Actions extends Component {
     }
     
     render(){
-        const { editProfile, profileId, profileData }= this.props;
+        const { editProfile, profileId, profileData,delProfile }= this.props;
         return(
         <div>
             <Icon className="action-icons" type="edit" onClick={() => editProfile(profileId, profileData)}/>
-            <Icon className="action-icons" type="delete" />
+            <Icon className="action-icons" type="delete" onClick={() => delProfile(profileId)}/>
         </div>
         );
     }
@@ -158,6 +158,10 @@ class Profiles extends Component {
         this.formRefSave = formRefSave;
     };
 
+    handleDeleteProfile = (id) => {
+        console.log("profile id: ", id);
+    }
+
     render(){
         const { isNewProfileModalVisible, isEditProfileModalVisible } = this.state;
         const tableColumns = [
@@ -176,7 +180,12 @@ class Profiles extends Component {
             {
                 title: <Icon className="new-profile-icon" type="form" onClick={() => this.handleNewProfile()}/>,
                 dataIndex: "id",
-                render: (a, row) => <Actions profileId={a} profileData={row} editProfile={(e,data) => this.handleEditProfile(e, data)}/>
+                render: (a, row) => <Actions 
+                                        profileId={a} 
+                                        profileData={row} 
+                                        editProfile={(id,data) => this.handleEditProfile(id, data)}
+                                        delProfile={(id) => this.handleDeleteProfile(id)}
+                                    />
             },
         ];
 
