@@ -6,6 +6,7 @@ import PageHeader from '../../../commons/page_header';
 import PageFooter from '../../../commons/page_footer';
 import NewProfileModal from '../new_profile';
 import EditProfileModal from '../edit_profile';
+import DeleteProfileModal from '../delete_profile';
 
 const { Content } = Layout;
 
@@ -91,7 +92,8 @@ class Actions extends Component {
 class Profiles extends Component {
     state = {
         isNewProfileModalVisible: false,
-        isEditProfileModalVisible: false
+        isEditProfileModalVisible: false,
+        isDeleteProfileModalVisible: false
     }
 
     handleEditProfile = (id, data) => {
@@ -159,11 +161,25 @@ class Profiles extends Component {
     };
 
     handleDeleteProfile = (id) => {
-        console.log("profile id: ", id);
+        this.setState({
+            isDeleteProfileModalVisible: true
+        });
+    }
+
+    handleProfileDelete = () => {
+        this.setState({
+            isDeleteProfileModalVisible: false
+        });
+    }
+
+    handleCancelDelete = () => {
+        this.setState({
+            isDeleteProfileModalVisible: false
+        });
     }
 
     render(){
-        const { isNewProfileModalVisible, isEditProfileModalVisible } = this.state;
+        const { isNewProfileModalVisible, isEditProfileModalVisible, isDeleteProfileModalVisible } = this.state;
         const tableColumns = [
             {
                 title: 'FIRST NAME',
@@ -202,6 +218,7 @@ class Profiles extends Component {
                 </Content>
                 <NewProfileModal wrappedComponentRef={this.saveFormRef} visible={isNewProfileModalVisible} onCancel={() => this.handleCancelNew()} onCreate={() => this.handleCreateProfile()}/>
                 <EditProfileModal wrappedComponentRef={this.updateFormRef} visible={isEditProfileModalVisible} onCancel={() => this.handleCancelEdit()} onUpdate={() => this.handleUpdateProfile()}/>
+                <DeleteProfileModal visible={isDeleteProfileModalVisible} onCancel={() => this.handleCancelDelete()} onDelete={() => this.handleProfileDelete()}/> 
                 <PageFooter/>
             </Layout>
         );
