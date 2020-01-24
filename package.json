@@ -1,8 +1,8 @@
 {
-  "name": "reactjs-restful-client",
+  "name": "ReactjsRESTfulClient",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://JCGDEGUZMAN.github.io/reactjs-restful-client/",
+  "homepage": "https://JCGDEGUZMAN.github.io/ReactjsRESTfulClient/",
   "dependencies": {
     "antd": "^3.26.6",
     "gh-pages": "^2.2.0",
