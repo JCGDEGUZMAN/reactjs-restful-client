@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e00dbdeffbc3732af575b870b3e0c963",
+    "revision": "f96227215c8bf0b3323652c162eb4930",
     "url": "/reactjs-restful-client/index.html"
   },
   {
-    "revision": "067d91addf3b1484569e",
+    "revision": "e83455d9230a391ecd0a",
     "url": "/reactjs-restful-client/static/css/2.35f98baf.chunk.css"
   },
   {
-    "revision": "52237eb05081b19b1ac4",
-    "url": "/reactjs-restful-client/static/css/main.c6616d73.chunk.css"
+    "revision": "5f155cf94b4a7c074268",
+    "url": "/reactjs-restful-client/static/css/main.a49c56c5.chunk.css"
   },
   {
-    "revision": "067d91addf3b1484569e",
-    "url": "/reactjs-restful-client/static/js/2.bb650ff1.chunk.js"
+    "revision": "e83455d9230a391ecd0a",
+    "url": "/reactjs-restful-client/static/js/2.a242a669.chunk.js"
   },
   {
-    "revision": "52237eb05081b19b1ac4",
-    "url": "/reactjs-restful-client/static/js/main.eb9bfc1d.chunk.js"
+    "revision": "5f155cf94b4a7c074268",
+    "url": "/reactjs-restful-client/static/js/main.166405c9.chunk.js"
   },
   {
     "revision": "684b014ce40f839ec7fd",
