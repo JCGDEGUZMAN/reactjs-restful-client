@@ -2,21 +2,21 @@ import './index.css';
 import React, {Component} from 'react';
 import { Form, Modal, Input, Row, Col } from 'antd';
 
-class NewProfile extends Component {
+class EditProfile extends Component {
 
     render(){
-        const { visible, onCancel, onCreate, form } = this.props;
+        const { visible, onCancel, onUpdate, form } = this.props;
         const { getFieldDecorator } = form;
         return(
             <Row type="flex" align="middle" justify="center">
                 <Col span={24}>
                     <Modal
-                        className="new-profile-modal"
+                        className="edit-profile-modal"
                         visible={visible}
-                        title="Create a New Profile"
-                        okText="Create"
+                        title="Edit Profile"
+                        okText="Update"
                         onCancel={onCancel}
-                        onOk={onCreate}
+                        onOk={onUpdate}
                     >
                         <Form layout="vertical">
                             <Form.Item label="First Name">
@@ -42,4 +42,4 @@ class NewProfile extends Component {
     }
 }
 
-export default Form.create()(NewProfile);
+export default Form.create()(EditProfile);

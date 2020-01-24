@@ -1,0 +1,22 @@
+.edit-profile-modal .ant-modal-header {
+    background-color: #FBB917 !important;
+    font-family: "copperplate-gothic-regular";
+}
+
+.edit-profile-modal .ant-modal-title {
+    color: #ffffff !important;
+}
+
+.edit-profile-modal .ant-modal-footer {
+    background-color: #FBB917 !important;
+    font-family: "copperplate-gothic-regular";
+}
+
+.edit-profile-modal .ant-btn-primary {
+    background-color: #2C3539 !important;
+}
+
+.edit-profile-modal .ant-modal-content {
+    width: 70%;
+    margin: 0px auto;
+}

@@ -5,6 +5,7 @@ import { Layout, Table, Icon } from 'antd';
 import PageHeader from '../../../commons/page_header';
 import PageFooter from '../../../commons/page_footer';
 import NewProfileModal from '../new_profile';
+import EditProfileModal from '../edit_profile';
 
 const { Content } = Layout;
 
@@ -72,10 +73,15 @@ const tableData = [
 ];
 
 class Actions extends Component {
+    constructor(props){
+        super(props);
+    }
+    
     render(){
+        const { editProfile, profileId, profileData }= this.props;
         return(
         <div>
-            <Icon className="action-icons" type="edit" />
+            <Icon className="action-icons" type="edit" onClick={() => editProfile()}/>
             <Icon className="action-icons" type="delete" />
         </div>
         );
@@ -84,40 +90,70 @@ class Actions extends Component {
 
 class Profiles extends Component {
     state = {
-        isModalVisible: false
+        isNewProfileModalVisible: false,
+        isEditProfileModalVisible: false
     }
 
-    handleNewProfile = () => {
+    handleEditProfile = () => {
         this.setState({
-            isModalVisible: true
+            isEditProfileModalVisible: true
         });
     }
 
-    handleCancel = () => {
-        const { form } = this.formRef.props;
-        form.resetFields();
-        this.setState({
-            isModalVisible: false
-        });
-    }
-
-    handleCreate = () => {
-        const { form } = this.formRef.props;
+    handleUpdateProfile = () => {
+        const { form } = this.formRefUpdate.props;
         form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
                 form.resetFields();
-                this.setState({ isModalVisible: false });
+                this.setState({ isEditProfileModalVisible: false });
             }
         });
     };
 
-    saveFormRef = formRef => {
-        this.formRef = formRef;
+    handleCancelEdit = () => {
+        const { form } = this.formRefUpdate.props;
+        form.resetFields();
+        this.setState({
+            isEditProfileModalVisible: false
+        });
+    }
+
+    updateFormRef = formRefUpdate => {
+        this.formRefUpdate = formRefUpdate;
+    };
+
+    handleNewProfile = () => {
+        this.setState({
+            isNewProfileModalVisible: true
+        });
+    }
+
+    handleCreateProfile = () => {
+        const { form } = this.formRefSave.props;
+        form.validateFields((err, values) => {
+            if (!err) {
+                console.log('Received values of form: ', values);
+                form.resetFields();
+                this.setState({ isNewProfileModalVisible: false });
+            }
+        });
+    };
+
+    handleCancelNew = () => {
+        const { form } = this.formRefSave.props;
+        form.resetFields();
+        this.setState({
+            isNewProfileModalVisible: false
+        });
+    }
+
+    saveFormRef = formRefSave => {
+        this.formRefSave = formRefSave;
     };
 
     render(){
-        const { isModalVisible } = this.state;
+        const { isNewProfileModalVisible, isEditProfileModalVisible } = this.state;
         const tableColumns = [
             {
                 title: 'FIRST NAME',
@@ -134,7 +170,7 @@ class Profiles extends Component {
             {
                 title: <Icon className="new-profile-icon" type="form" onClick={() => this.handleNewProfile()}/>,
                 dataIndex: "id",
-                render: (a, row) => <Actions profileId={a} profileData={row} />
+                render: (a, row) => <Actions profileId={a} profileData={row} editProfile={() => this.handleEditProfile()}/>
             },
         ];
 
@@ -149,7 +185,8 @@ class Profiles extends Component {
                         pagination={{defaultPageSize: 7}}
                     />
                 </Content>
-                <NewProfileModal wrappedComponentRef={this.saveFormRef} visible={isModalVisible} onCancel={() => this.handleCancel()} onCreate={() => this.handleCreate()}/>
+                <NewProfileModal wrappedComponentRef={this.saveFormRef} visible={isNewProfileModalVisible} onCancel={() => this.handleCancelNew()} onCreate={() => this.handleCreateProfile()}/>
+                <EditProfileModal wrappedComponentRef={this.updateFormRef} visible={isEditProfileModalVisible} onCancel={() => this.handleCancelEdit()} onUpdate={() => this.handleUpdateProfile()}/>
                 <PageFooter/>
             </Layout>
         );
