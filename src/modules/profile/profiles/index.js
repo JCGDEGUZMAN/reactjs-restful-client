@@ -81,7 +81,7 @@ class Actions extends Component {
         const { editProfile, profileId, profileData }= this.props;
         return(
         <div>
-            <Icon className="action-icons" type="edit" onClick={() => editProfile()}/>
+            <Icon className="action-icons" type="edit" onClick={() => editProfile(profileId, profileData)}/>
             <Icon className="action-icons" type="delete" />
         </div>
         );
@@ -94,7 +94,13 @@ class Profiles extends Component {
         isEditProfileModalVisible: false
     }
 
-    handleEditProfile = () => {
+    handleEditProfile = (id, data) => {
+        const { form } = this.formRefUpdate.props;
+        form.setFieldsValue({
+            fname: data.fname,
+            mname: data.mname,
+            lname: data.lname
+        })
         this.setState({
             isEditProfileModalVisible: true
         });
@@ -170,7 +176,7 @@ class Profiles extends Component {
             {
                 title: <Icon className="new-profile-icon" type="form" onClick={() => this.handleNewProfile()}/>,
                 dataIndex: "id",
-                render: (a, row) => <Actions profileId={a} profileData={row} editProfile={() => this.handleEditProfile()}/>
+                render: (a, row) => <Actions profileId={a} profileData={row} editProfile={(e,data) => this.handleEditProfile(e, data)}/>
             },
         ];
 
