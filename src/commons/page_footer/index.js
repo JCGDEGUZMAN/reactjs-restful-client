@@ -5,7 +5,7 @@ const { Footer } = Layout;
 
 function PageFooter(){
     return(
-        <Footer className="profiles-footer"></Footer>
+        <Footer className="profiles-footer">&copy;JCGDEGUZMAN</Footer>
     );
 }
 

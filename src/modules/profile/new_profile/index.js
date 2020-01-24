@@ -4,6 +4,14 @@ import { Form, Modal, Input, Row, Col } from 'antd';
 
 class NewProfile extends Component {
 
+    componentDidUpdate(prevProps, prevState){
+        const { visible, onCancel } = this.props;
+       
+        if(prevProps.visible !== visible){
+            this.props.form.resetFields();
+        }
+    }
+
     render(){
         const { visible, onCancel, onCreate, form } = this.props;
         const { getFieldDecorator } = form;

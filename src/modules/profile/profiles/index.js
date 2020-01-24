@@ -94,16 +94,27 @@ class Profiles extends Component {
     }
 
     handleCancel = () => {
+        const { form } = this.formRef.props;
+        form.resetFields();
         this.setState({
             isModalVisible: false
         });
     }
 
     handleCreate = () => {
-        this.setState({
-            isModalVisible: false
+        const { form } = this.formRef.props;
+        form.validateFields((err, values) => {
+            if (!err) {
+                console.log('Received values of form: ', values);
+                form.resetFields();
+                this.setState({ isModalVisible: false });
+            }
         });
-    }
+    };
+
+    saveFormRef = formRef => {
+        this.formRef = formRef;
+    };
 
     render(){
         const { isModalVisible } = this.state;
@@ -138,7 +149,7 @@ class Profiles extends Component {
                         pagination={{defaultPageSize: 7}}
                     />
                 </Content>
-                <NewProfileModal visible={isModalVisible} onCancel={() => this.handleCancel()} onCreate={() => this.handleCreate()}/>
+                <NewProfileModal wrappedComponentRef={this.saveFormRef} visible={isModalVisible} onCancel={() => this.handleCancel()} onCreate={() => this.handleCreate()}/>
                 <PageFooter/>
             </Layout>
         );
