@@ -18,3 +18,12 @@ export const httpPostRequest = async (endpoint, data) => {
         return error;
     }
 }
+
+export const httpPutRequest = async (endpoint, data) => {
+    try {
+        const response = await axios.put(api_url + endpoint, data);
+        return response.data;   
+    } catch (error) {
+        return error;
+    }
+}

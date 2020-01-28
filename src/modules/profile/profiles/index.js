@@ -8,7 +8,7 @@ import NewProfileModal from '../new_profile';
 import EditProfileModal from '../edit_profile';
 import DeleteProfileModal from '../delete_profile';
 
-import { httpGetRequest, httpPostRequest } from '../../../utils/httpRequest.js';
+import { httpGetRequest, httpPostRequest, httpPutRequest } from '../../../utils/httpRequest.js';
 
 const { Content } = Layout;
 
@@ -96,7 +96,8 @@ class Profiles extends Component {
         isNewProfileModalVisible: false,
         isEditProfileModalVisible: false,
         isDeleteProfileModalVisible: false,
-        profilesData: []
+        profilesData: [],
+        profileId: 0
     }
 
     componentDidMount(){
@@ -119,6 +120,14 @@ class Profiles extends Component {
         })
     }
 
+    handleProfileUpdate = (data) => {
+        const { profileId } = this.state;
+        httpPutRequest('update-profile/' + profileId, data).then(result => {
+            console.log("post result: ", result)
+            this.handleGetProfiles()
+        })
+    }
+
     handleEditProfile = (id, data) => {
         const { form } = this.formRefUpdate.props;
         form.setFieldsValue({
@@ -127,7 +136,8 @@ class Profiles extends Component {
             plname: data.plname
         })
         this.setState({
-            isEditProfileModalVisible: true
+            isEditProfileModalVisible: true,
+            profileId: id
         });
     }
 
@@ -136,6 +146,7 @@ class Profiles extends Component {
         form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
+                this.handleProfileUpdate(values);
                 form.resetFields();
                 this.setState({ isEditProfileModalVisible: false });
             }
