@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ReactjsRESTfulClient/static/css/main.2514b73d.chunk.css",
-    "main.js": "/ReactjsRESTfulClient/static/js/main.02c77b45.chunk.js",
-    "main.js.map": "/ReactjsRESTfulClient/static/js/main.02c77b45.chunk.js.map",
+    "main.js": "/ReactjsRESTfulClient/static/js/main.30f6c8ac.chunk.js",
+    "main.js.map": "/ReactjsRESTfulClient/static/js/main.30f6c8ac.chunk.js.map",
     "runtime-main.js": "/ReactjsRESTfulClient/static/js/runtime-main.5c602eb2.js",
     "runtime-main.js.map": "/ReactjsRESTfulClient/static/js/runtime-main.5c602eb2.js.map",
     "static/css/2.35f98baf.chunk.css": "/ReactjsRESTfulClient/static/css/2.35f98baf.chunk.css",
     "static/js/2.c88b1483.chunk.js": "/ReactjsRESTfulClient/static/js/2.c88b1483.chunk.js",
     "static/js/2.c88b1483.chunk.js.map": "/ReactjsRESTfulClient/static/js/2.c88b1483.chunk.js.map",
     "index.html": "/ReactjsRESTfulClient/index.html",
-    "precache-manifest.9d20a0bd396928e69cb425f0f5e008e3.js": "/ReactjsRESTfulClient/precache-manifest.9d20a0bd396928e69cb425f0f5e008e3.js",
+    "precache-manifest.50cda747df087004753972fce7061ec3.js": "/ReactjsRESTfulClient/precache-manifest.50cda747df087004753972fce7061ec3.js",
     "service-worker.js": "/ReactjsRESTfulClient/service-worker.js",
     "static/css/2.35f98baf.chunk.css.map": "/ReactjsRESTfulClient/static/css/2.35f98baf.chunk.css.map",
     "static/css/main.2514b73d.chunk.css.map": "/ReactjsRESTfulClient/static/css/main.2514b73d.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.35f98baf.chunk.css",
     "static/js/2.c88b1483.chunk.js",
     "static/css/main.2514b73d.chunk.css",
-    "static/js/main.02c77b45.chunk.js"
+    "static/js/main.30f6c8ac.chunk.js"
   ]
 }
