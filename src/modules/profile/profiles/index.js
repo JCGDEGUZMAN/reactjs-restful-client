@@ -8,68 +8,70 @@ import NewProfileModal from '../new_profile';
 import EditProfileModal from '../edit_profile';
 import DeleteProfileModal from '../delete_profile';
 
+import { httpGetRequest, httpPostRequest } from '../../../utils/httpRequest.js';
+
 const { Content } = Layout;
 
 const tableData = [
     {
         id: 1,
-        fname: 'Julius',
-        mname: 'Guevarra',
-        lname: 'De Guzman',
+        pfname: 'Julius',
+        pmname: 'Guevarra',
+        plname: 'De Guzman',
     },
     {
         id: 2,
-        fname: 'Lisalea',
-        mname: 'Angeles',
-        lname: 'Santiago',
+        pfname: 'Lisalea',
+        pmname: 'Angeles',
+        plname: 'Santiago',
     },
     {
         id: 3,
-        fname: 'Julius',
-        mname: 'Guevarra',
-        lname: 'De Guzman',
+        pfname: 'Julius',
+        pmname: 'Guevarra',
+        plname: 'De Guzman',
     },
     {
         id: 4,
-        fname: 'Lisalea',
-        mname: 'Angeles',
-        lname: 'Santiago',
+        pfname: 'Lisalea',
+        pmname: 'Angeles',
+        plname: 'Santiago',
     },
     {
         id: 5,
-        fname: 'Julius',
-        mname: 'Guevarra',
-        lname: 'De Guzman',
+        pfname: 'Julius',
+        pmname: 'Guevarra',
+        plname: 'De Guzman',
     },
     {
         id: 6,
-        fname: 'Lisalea',
-        mname: 'Angeles',
-        lname: 'Santiago',
+        pfname: 'Lisalea',
+        pmname: 'Angeles',
+        plname: 'Santiago',
     },
     {
         id: 7,
-        fname: 'Julius',
-        mname: 'Guevarra',
-        lname: 'De Guzman',
+        pfname: 'Julius',
+        pmname: 'Guevarra',
+        plname: 'De Guzman',
     },
     {
         id: 8,
-        fname: 'Lisalea',
-        mname: 'Angeles',
-        lname: 'Santiago',
+        pfname: 'Lisalea',
+        pmname: 'Angeles',
+        plname: 'Santiago',
     },
     {
         id: 9,
-        fname: 'Julius',
-        mname: 'Guevarra',
-        lname: 'De Guzman',
+        pfname: 'Julius',
+        pmname: 'Guevarra',
+        plname: 'De Guzman',
     },
     {
         id: 10,
-        fname: 'Lisalea',
-        mname: 'Angeles',
-        lname: 'Santiago',
+        pfname: 'Lisalea',
+        pmname: 'Angeles',
+        plname: 'Santiago',
     },
 ];
 
@@ -94,6 +96,22 @@ class Profiles extends Component {
         isNewProfileModalVisible: false,
         isEditProfileModalVisible: false,
         isDeleteProfileModalVisible: false
+    }
+
+    componentDidMount(){
+        this.handleGetProfiles()
+    }
+
+    handleGetProfiles = () => {
+        httpGetRequest('profiles').then(result => {
+            console.log("get result: ", result)
+        })
+    }
+
+    handleSaveProfile = (data) => {
+        httpPostRequest('new-profile', data).then(result => {
+            console.log("post result: ", result)
+        })
     }
 
     handleEditProfile = (id, data) => {
@@ -141,7 +159,7 @@ class Profiles extends Component {
         const { form } = this.formRefSave.props;
         form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+                this.handleSaveProfile(values);
                 form.resetFields();
                 this.setState({ isNewProfileModalVisible: false });
             }
@@ -183,15 +201,15 @@ class Profiles extends Component {
         const tableColumns = [
             {
                 title: 'FIRST NAME',
-                dataIndex: 'fname',
+                dataIndex: 'pfname',
             },
             {
                 title: 'MIDDLE NAME',
-                dataIndex: 'mname',
+                dataIndex: 'pmname',
             },
             {
                 title: 'LAST NAME',
-                dataIndex: 'lname',
+                dataIndex: 'plname',
             },
             {
                 title: <Icon className="new-profile-icon" type="form" onClick={() => this.handleNewProfile()}/>,
@@ -214,6 +232,7 @@ class Profiles extends Component {
                         columns={tableColumns}
                         dataSource={tableData}
                         pagination={{defaultPageSize: 7}}
+                        rowKey="id"
                     />
                 </Content>
                 <NewProfileModal wrappedComponentRef={this.saveFormRef} visible={isNewProfileModalVisible} onCancel={() => this.handleCancelNew()} onCreate={() => this.handleCreateProfile()}/>
