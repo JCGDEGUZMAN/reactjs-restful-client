@@ -107,7 +107,7 @@ class Profiles extends Component {
         httpGetRequest('profiles').then(result => {
             console.log("get result: ", result)
             this.setState({
-                profilesData: result
+                profilesData: result.reverse()
             })
         })
     }
