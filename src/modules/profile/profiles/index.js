@@ -8,7 +8,7 @@ import NewProfileModal from '../new_profile';
 import EditProfileModal from '../edit_profile';
 import DeleteProfileModal from '../delete_profile';
 
-import { httpGetRequest, httpPostRequest, httpPutRequest } from '../../../utils/httpRequest.js';
+import { httpGetRequest, httpPostRequest, httpPutRequest, httpDeleteRequest } from '../../../utils/httpRequest.js';
 
 const { Content } = Layout;
 
@@ -123,8 +123,20 @@ class Profiles extends Component {
     handleProfileUpdate = (data) => {
         const { profileId } = this.state;
         httpPutRequest('update-profile/' + profileId, data).then(result => {
-            console.log("post result: ", result)
+            console.log("put result: ", result)
             this.handleGetProfiles()
+        })
+    }
+
+    handleProfileDelete = () => {
+        const { profileId } = this.state;
+        httpDeleteRequest('delete-profile/' + profileId).then(result => {
+            console.log("delete result: ", result)
+            this.handleGetProfiles()
+
+            this.setState({
+                isDeleteProfileModalVisible: false
+            });
         })
     }
 
@@ -196,13 +208,8 @@ class Profiles extends Component {
 
     handleDeleteProfile = (id) => {
         this.setState({
-            isDeleteProfileModalVisible: true
-        });
-    }
-
-    handleProfileDelete = () => {
-        this.setState({
-            isDeleteProfileModalVisible: false
+            isDeleteProfileModalVisible: true,
+            profileId: id
         });
     }
 

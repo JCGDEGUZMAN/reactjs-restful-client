@@ -27,3 +27,12 @@ export const httpPutRequest = async (endpoint, data) => {
         return error;
     }
 }
+
+export const httpDeleteRequest = async (endpoint) => {
+    try {
+        const response = await axios.delete(api_url + endpoint);
+        return response.data;   
+    } catch (error) {
+        return error;
+    }
+}
