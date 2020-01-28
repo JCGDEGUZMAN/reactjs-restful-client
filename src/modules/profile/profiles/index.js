@@ -115,6 +115,7 @@ class Profiles extends Component {
     handleSaveProfile = (data) => {
         httpPostRequest('new-profile', data).then(result => {
             console.log("post result: ", result)
+            this.handleGetProfiles()
         })
     }
 

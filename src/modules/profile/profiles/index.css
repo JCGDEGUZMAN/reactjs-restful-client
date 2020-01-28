@@ -4,7 +4,7 @@
 
 .profiles-content {
    width: 100%;
-   min-height: calc(100vh - 157px);
+   min-height: calc(100vh - 151px);
 }
 
 .profiles-content  .ant-table-thead > tr > th {
