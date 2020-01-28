@@ -95,7 +95,8 @@ class Profiles extends Component {
     state = {
         isNewProfileModalVisible: false,
         isEditProfileModalVisible: false,
-        isDeleteProfileModalVisible: false
+        isDeleteProfileModalVisible: false,
+        profilesData: []
     }
 
     componentDidMount(){
@@ -105,6 +106,9 @@ class Profiles extends Component {
     handleGetProfiles = () => {
         httpGetRequest('profiles').then(result => {
             console.log("get result: ", result)
+            this.setState({
+                profilesData: result
+            })
         })
     }
 
@@ -197,7 +201,7 @@ class Profiles extends Component {
     }
 
     render(){
-        const { isNewProfileModalVisible, isEditProfileModalVisible, isDeleteProfileModalVisible } = this.state;
+        const { isNewProfileModalVisible, isEditProfileModalVisible, isDeleteProfileModalVisible, profilesData } = this.state;
         const tableColumns = [
             {
                 title: 'FIRST NAME',
@@ -230,7 +234,7 @@ class Profiles extends Component {
                     <Table
                         className="content-table"
                         columns={tableColumns}
-                        dataSource={tableData}
+                        dataSource={profilesData}
                         pagination={{defaultPageSize: 7}}
                         rowKey="id"
                     />
