@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ddb4b2b039979a76f2a7117dc0c7b39",
+    "revision": "338c8df586b6bf69b0d92c7c48f47fa9",
     "url": "/ReactjsRESTfulClient/index.html"
   },
   {
-    "revision": "12bcc32685a81a81c0c4",
+    "revision": "9dbc7b60acd361971fd9",
     "url": "/ReactjsRESTfulClient/static/css/2.35f98baf.chunk.css"
   },
   {
-    "revision": "c5f8ea4795c55aebaf72",
-    "url": "/ReactjsRESTfulClient/static/css/main.17d4490e.chunk.css"
+    "revision": "49989119cb90e200a005",
+    "url": "/ReactjsRESTfulClient/static/css/main.2514b73d.chunk.css"
   },
   {
-    "revision": "12bcc32685a81a81c0c4",
-    "url": "/ReactjsRESTfulClient/static/js/2.c258b425.chunk.js"
+    "revision": "9dbc7b60acd361971fd9",
+    "url": "/ReactjsRESTfulClient/static/js/2.c88b1483.chunk.js"
   },
   {
-    "revision": "c5f8ea4795c55aebaf72",
-    "url": "/ReactjsRESTfulClient/static/js/main.4dddebd7.chunk.js"
+    "revision": "49989119cb90e200a005",
+    "url": "/ReactjsRESTfulClient/static/js/main.02c77b45.chunk.js"
   },
   {
     "revision": "f22673807dccebb88430",
