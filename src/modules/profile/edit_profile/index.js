@@ -20,17 +20,17 @@ class EditProfile extends Component {
                     >
                         <Form layout="vertical">
                             <Form.Item label="First Name">
-                                {getFieldDecorator('fname', {
+                                {getFieldDecorator('pfname', {
                                     rules: [{ required: true, message: 'Please input first name!' }],
                                 })(<Input />)}
                             </Form.Item>
                             <Form.Item label="Middle Name">
-                                {getFieldDecorator('mname', {
+                                {getFieldDecorator('pmname', {
                                     rules: [{ required: true, message: 'Please input middle name!' }],
                                 })(<Input />)}
                             </Form.Item>
                             <Form.Item label="Last Name">
-                                {getFieldDecorator('lname', {
+                                {getFieldDecorator('plname', {
                                     rules: [{ required: true, message: 'Please input last name!' }],
                                 })(<Input />)}
                             </Form.Item>

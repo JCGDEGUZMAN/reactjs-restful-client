@@ -122,9 +122,9 @@ class Profiles extends Component {
     handleEditProfile = (id, data) => {
         const { form } = this.formRefUpdate.props;
         form.setFieldsValue({
-            fname: data.fname,
-            mname: data.mname,
-            lname: data.lname
+            pfname: data.pfname,
+            pmname: data.pmname,
+            plname: data.plname
         })
         this.setState({
             isEditProfileModalVisible: true
